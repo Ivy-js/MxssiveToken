@@ -2,6 +2,7 @@ const Event = require("../../Base/Event")
 const Discord = require("discord.js")
 const allowedUserIDs = {
     ivy: "1114616280138395738",
+    evy : "1197290141350383636"
 };
 module.exports = new Event("interactionCreate", async (client, interaction) => {
 

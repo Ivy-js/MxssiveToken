@@ -141,7 +141,7 @@ T'es ok avec ca ? Si oui, clique sur le bouton ci-dessous pour valider ton compt
                     if(interaction.customId === "EndRow"){
                         interaction.deferUpdate()
                         client.db.set(`users.${interaction.user.id}.validated`, true)
-                        client.db.set(`users.${interaction.user.id}.coins`, 250)
+                        client.db.add(`users.${interaction.user.id}.coins`, 250)
                         client.db.set(`users.${interaction.user.id}.created`, interaction.createdTimestamp)
 
                         const userEmbed = new Discord.MessageEmbed()

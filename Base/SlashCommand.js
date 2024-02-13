@@ -13,7 +13,12 @@ module.exports = async bot => {
         .setDescription("Permet de créer ton compte Mxssive"),
         new SlashCommandBuilder()
         .setName("compte")
-        .setDescription("Permet de récupérer les informations de ton compte Mxssive")
+        .setDescription("Permet de récupérer les informations de ton compte Mxssive"),
+        new SlashCommandBuilder()
+        .setName("editaccount")
+        .setDescription("Permet à un admin de modifier un compte Mxssive")
+        .addUserOption(option => option.setName("user").setDescription("L'utilisateur à modifier").setRequired(true)),
+
     ];
     commands.push.toString(commands)
     
