@@ -10,9 +10,15 @@ module.exports = new Command({
     perm: Discord.Permissions.FLAGS.VIEW_CHANNEL,
     category: "User",
 
-
+    /**
+     * 
+     * @param {import("../../Base/Client")} client 
+     * @param {Discord.Message} message 
+     * @param {String[]} args 
+     * @returns 
+     */
     async run(client, message, args) {
-        if((await client.db.get(`users.${message.user.id}.validated`)) === true) return message.reply({embeds : [{title : "Erreur", description : "Tu as déjà un compte Mxssive !", color : client.color}]})
+        if((await client.db.has(`users.${message.user.id}.mxssive`))) return message.reply({embeds : [{title : "Erreur", description : "Tu as déjà un compte Mxssive !", color : client.color}]})
             const StartEmbed = new Discord.MessageEmbed()
                 .setColor(client.color)
                 .setTitle("Création de ton compte Mxssive")

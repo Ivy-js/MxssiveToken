@@ -15,6 +15,7 @@
     "better-sqlite3": "^9.4.1",
     "colors": "^1.4.0",
     "colors-cli": "^1.0.33",
+    "discord-bettermarkdown": "^2.1.1",
     "discord-regiveaways": "^1.1.15",
     "discord.js": "v13.14",
     "moment": "^2.30.1",

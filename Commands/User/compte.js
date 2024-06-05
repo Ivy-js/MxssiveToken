@@ -25,7 +25,7 @@ __**Pseudo Discord**__ : ${message.user.username}
 
 
 **Votre Porte-Monnaie** :
-__**Solde**__ : ${await client.db.get(`users.${message.user.id}.coins`)} MxssiveCoins 🧩
+__**Solde**__ : ${await client.db.get(`users.${message.user.id}.coins`)} MxssiveCoins <a:coins:1246850429514416200>
         `)
         .setColor(client.color)
         .setFooter({text : "Mxssive - Informations de compte", iconURL : client.user.displayAvatarURL({dynamic : true})})

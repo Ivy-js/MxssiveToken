@@ -9,6 +9,8 @@ const db = new QuickDB()
 const GiveawayManager = require("discord-regiveaways"); 
 var color = require("colors-cli/safe")
 require("colors")
+const { createID} = require("../Functions/createId")
+const { randomElo } = require("../Functions/randomElo")
 class Client extends Discord.Client {
   constructor(options) {
     super({ intents });
@@ -20,7 +22,7 @@ class Client extends Discord.Client {
       storage : "./giveaways.json", 
       config : {
         botsCanWin : false, 
-        embedColor : "#FFA726", 
+        embedColor : "#3F51B5", 
         embedColorEnd : this.color, 
         reaction : "🎆", 
         botName : `🎆 Giveaway`, 
@@ -33,6 +35,8 @@ class Client extends Discord.Client {
     this.prefix = config.prefix;
     this.config = config
     this.db = db,
+    this.createId = createID;
+    this.randomElo = randomElo;
     this.GiveawayManager = manager; 
   }
 
