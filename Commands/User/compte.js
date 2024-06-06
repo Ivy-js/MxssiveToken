@@ -24,11 +24,16 @@ __**Pseudo Fortnite**__ : ${await client.db.get(`users.${message.user.id}.fortni
 __**Pseudo Discord**__ : ${message.user.username}
 
 
+__**Elo**__ : \`${await client.db.get(`users.${message.user.id}.elo`)}✨\`
+
 **Votre Porte-Monnaie** :
 __**Solde**__ : ${await client.db.get(`users.${message.user.id}.coins`)} MxssiveCoins <a:coins:1246850429514416200>
+
         `)
         .setColor(client.color)
         .setFooter({text : "Mxssive - Informations de compte", iconURL : client.user.displayAvatarURL({dynamic : true})})
         await message.reply({embeds : [embed]});
+
+        
     },
 });
